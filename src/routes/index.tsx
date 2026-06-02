@@ -10,6 +10,7 @@ import sportsImg from "@/assets/sports.jpg";
 import homeImg from "@/assets/home-visit.jpg";
 import physioImg from "@/assets/physio.jpg";
 import elderlyImg from "@/assets/elderly.jpg";
+import facilityImg from "@/assets/facility.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -119,7 +120,7 @@ function Index() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
-            <img src={facilityImage()} alt="Modern rehabilitation hospital facility" loading="lazy" className="rounded-3xl shadow-card aspect-[4/3] object-cover w-full" />
+            <img src={facilityImg} alt="Modern rehabilitation hospital facility" loading="lazy" className="rounded-3xl shadow-card aspect-[4/3] object-cover w-full" />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-primary text-primary-foreground rounded-2xl p-6 shadow-glow max-w-[220px]">
               <p className="text-4xl font-bold">10+</p>
               <p className="text-sm text-primary-foreground/80 mt-1">years of dedicated rehabilitation experience</p>
@@ -288,7 +289,3 @@ function Index() {
   );
 }
 
-function facilityImage() {
-  // separated to avoid top-level import order; just returns the imported asset path
-  return new URL("../assets/facility.jpg", import.meta.url).href;
-}
