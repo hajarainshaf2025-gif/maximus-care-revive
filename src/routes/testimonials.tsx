@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Star } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site/Layout";
-import { TESTIMONIALS } from "@/lib/site";
+import { GOOGLE_REVIEWS, TESTIMONIALS } from "@/lib/site";
 
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
@@ -21,6 +21,14 @@ function Testimonials() {
   return (
     <SiteLayout>
       <PageHeader eyebrow="Patient Stories" title="Recoveries we are proud of." intro="Real patients. Real recoveries. Real lives restored." />
+      <section className="pt-16 container mx-auto px-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 rounded-3xl bg-card border border-border p-6 shadow-soft">
+          <div className="flex gap-0.5 text-accent">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-6 w-6 fill-current" />)}</div>
+          <span className="text-2xl font-bold text-foreground">{GOOGLE_REVIEWS.rating} Google Rating</span>
+          <span className="text-muted-foreground">·</span>
+          <span className="text-lg font-semibold text-muted-foreground">{GOOGLE_REVIEWS.count} Reviews</span>
+        </div>
+      </section>
       <section className="py-16 container mx-auto px-6 grid md:grid-cols-2 gap-6">
         {TESTIMONIALS.map((t) => (
           <figure key={t.name} className="rounded-3xl bg-card border border-border p-8 shadow-soft hover:shadow-card transition-shadow">
