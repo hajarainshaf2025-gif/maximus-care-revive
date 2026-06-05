@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/maximus-logo-long.asset.json";
+import logo from "@/assets/logo.png";
 import { BRANCHES, NAV, SITE } from "@/lib/site";
 
 export function Footer() {
@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="bg-white/95 inline-block rounded-lg p-3 mb-4">
-            <img src={logo.url} alt="Maximus Care" className="h-12 w-auto" />
+            <img src={logo} alt="Maximus Care" className="h-12 w-auto" />
           </div>
           <p className="text-sm text-primary-foreground/80 leading-relaxed">
             Sri Lanka's trusted physiotherapy & rehabilitation provider — restoring movement, independence and quality of life.
