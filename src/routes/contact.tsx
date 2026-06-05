@@ -43,7 +43,11 @@ function Contact() {
             </a>
             <a href={`https://wa.me/${SITE.whatsapp}`} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft hover:shadow-card transition-shadow">
               <div className="grid place-items-center h-12 w-12 rounded-xl bg-success text-success-foreground"><MessageCircle className="h-5 w-5" /></div>
-              <div><p className="font-semibold">WhatsApp</p><p className="text-muted-foreground">Chat with our team</p></div>
+              <div><p className="font-semibold">WhatsApp</p><p className="text-muted-foreground">{SITE.whatsappDisplay}</p></div>
+            </a>
+            <a href={`https://wa.me/${SITE.whatsapp2}`} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft hover:shadow-card transition-shadow">
+              <div className="grid place-items-center h-12 w-12 rounded-xl bg-success text-success-foreground"><MessageCircle className="h-5 w-5" /></div>
+              <div><p className="font-semibold">WhatsApp</p><p className="text-muted-foreground">{SITE.whatsapp2Display}</p></div>
             </a>
             <a href={`mailto:${SITE.email}`} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft hover:shadow-card transition-shadow">
               <div className="grid place-items-center h-12 w-12 rounded-xl bg-gradient-accent text-accent-foreground"><Mail className="h-5 w-5" /></div>
