@@ -4,7 +4,10 @@ export const SITE = {
   phone: "077 647 9364",
   phoneIntl: "+94776479364",
   whatsapp: "94776479364",
-  hours: "Daily 9:00 AM – 9:00 PM",
+  whatsapp2: "94741041324",
+  whatsappDisplay: "077 647 9364",
+  whatsapp2Display: "074 104 1324",
+  hours: "Open Daily · 9:00 AM – 9:00 PM",
   email: "info@maximuscare.lk",
   facebook: "https://facebook.com/maximuscare",
   instagram: "https://instagram.com/maximuscare",
@@ -35,14 +38,14 @@ export const BRANCHES = [
     slug: "bandaragama",
     name: "Maximus Care Bandaragama",
     tag: "Branch",
-    address: "Mawatha, Atulugama, Bandaragama, Sri Lanka",
-    maps: "https://www.google.com/maps?q=Atulugama+Bandaragama+Sri+Lanka&output=embed",
-    directions: "https://www.google.com/maps/dir/?api=1&destination=Atulugama+Bandaragama+Sri+Lanka",
+    address: "Mahawatta, Atulugama, Bandaragama, Sri Lanka",
+    maps: "https://www.google.com/maps?q=Mahawatta+Atulugama+Bandaragama+Sri+Lanka&output=embed",
+    directions: "https://www.google.com/maps/dir/?api=1&destination=Mahawatta+Atulugama+Bandaragama+Sri+Lanka",
   },
   {
     slug: "beruwala",
     name: "Nexus Physio & Rehab Center",
-    tag: "Partner Branch",
+    tag: "Branch",
     address: "100/4A, Hena Road, Beruwala, Sri Lanka",
     maps: "https://www.google.com/maps?q=Hena+Road+Beruwala+Sri+Lanka&output=embed",
     directions: "https://www.google.com/maps/dir/?api=1&destination=Hena+Road+Beruwala+Sri+Lanka",
@@ -51,9 +54,9 @@ export const BRANCHES = [
     slug: "kalubowila",
     name: "Maximus Care Neuro Unit",
     tag: "Neuro Specialty",
-    address: "Kalubowila, Dehiwala, Sri Lanka",
-    maps: "https://www.google.com/maps?q=Kalubowila+Dehiwala+Sri+Lanka&output=embed",
-    directions: "https://www.google.com/maps/dir/?api=1&destination=Kalubowila+Dehiwala+Sri+Lanka",
+    address: "Woodland Mawatha, Anderson Road, Kalubowila, Dehiwala, Sri Lanka",
+    maps: "https://www.google.com/maps?q=Woodland+Mawatha+Anderson+Road+Kalubowila+Dehiwala+Sri+Lanka&output=embed",
+    directions: "https://www.google.com/maps/dir/?api=1&destination=Woodland+Mawatha+Anderson+Road+Kalubowila+Dehiwala+Sri+Lanka",
   },
 ];
 
@@ -72,7 +75,7 @@ export const SERVICES = [
   ["Sunnah Hijama Therapy", "Traditional sunnah cupping practised in a hygienic clinical setting."],
   ["Acupuncture", "Fine-needle therapy supporting pain relief and recovery."],
   ["Speech Therapy", "Language, swallowing and communication therapy for neurological patients."],
-  ["Home Visit Physiotherapy", "Professional rehabilitation delivered in the comfort of your home."],
+  ["Home Visit Physiotherapy", "Professional physiotherapy delivered in the comfort of your home."],
   ["Workplace Injury Rehabilitation", "Return-to-work programs for occupational injuries."],
   ["Balance & Fall Prevention", "Strength and stability training to keep seniors safely on their feet."],
   ["Women's Health Physiotherapy", "Pre and postnatal, pelvic floor and women-specific care."],
@@ -95,24 +98,41 @@ export const PROGRAMS = [
 
 export const WHY = [
   "Experienced Physiotherapy Team",
-  "Personalized Rehabilitation Programs",
+  "Personalized Physiotherapy Programs",
   "Evidence-Based Treatments",
   "Neurological Rehabilitation Expertise",
   "Stroke Recovery Specialists",
   "Affordable Care Packages",
-  "Home Visit Services",
+  "Home Visit Physiotherapy",
   "Inpatient Rehabilitation Facilities",
   "Multiple Branches Across Sri Lanka",
-  "Advanced Rehabilitation Equipment",
+  "Advanced Physiotherapy Equipment",
   "Long-Term Recovery Focus",
   "Patient-Centered Care",
 ];
 
+export const STATS = [
+  ["5+", "Years of Service"],
+  ["10+", "Therapists"],
+  ["5000+", "Patients Treated"],
+  ["4", "Branches Across Sri Lanka"],
+  ["10000+", "Treatment Sessions"],
+] as const;
+
+export const GOOGLE_REVIEWS = {
+  rating: "5.0",
+  count: "73+",
+};
+
 export const TESTIMONIALS = [
-  { name: "Nimal Perera", role: "Stroke recovery, 14 months", stars: 5, quote: "After my stroke I could not stand. The Maximus Care team rebuilt my strength step by step. Today I walk to the temple every morning." },
-  { name: "Fathima Rizwan", role: "Post-surgical, knee replacement", stars: 5, quote: "Their inpatient program gave me three sessions a day and constant guidance. I was climbing stairs within a month." },
-  { name: "Sanjeewa Bandara", role: "Sports injury", stars: 5, quote: "Professional, evidence-based and genuinely caring. They returned me to competitive cricket safely." },
-  { name: "Mrs. Silva", role: "Mother of patient with Erb's palsy", stars: 5, quote: "The paediatric team is patient and skilled. We have seen amazing progress in our son's arm movement." },
-  { name: "Rohan Jayasinghe", role: "Chronic back pain", stars: 5, quote: "Years of pain managed in weeks. The combination of physio and dry needling changed my life." },
-  { name: "Mr. Wickramasinghe", role: "Parkinson's, ongoing care", stars: 5, quote: "The home visit therapists treat my father with respect and skill. We cannot thank them enough." },
+  { name: "Mohamed Arkam", role: "Family of stroke patient", stars: 5, quote: "My mother, a stroke patient, received dedicated physiotherapy treatment and showed remarkable improvement. The team's care, professionalism and commitment made a significant difference in her recovery." },
+  { name: "Shifan Riyas", role: "Shoulder pain & stiffness", stars: 5, quote: "I experienced shoulder pain and muscle stiffness for nearly a month. After assessment and treatment at Maximus Care, my symptoms improved significantly. The team was honest, professional and focused on the right treatment." },
+  { name: "Hajara Sabry", role: "Shoulder dislocation care", stars: 5, quote: "My friend suffered a shoulder dislocation and received excellent care. The treatment was gentle, professional and highly effective. We are truly grateful for the support provided." },
+  { name: "Insaf Ismail", role: "Neck & back pain", stars: 5, quote: "After physiotherapy and cupping therapy, my neck and upper back pain improved dramatically. Professional therapists, affordable pricing and excellent results." },
+  { name: "Sheik Aroos", role: "Family of patient", stars: 5, quote: "My mother underwent physiotherapy treatment and had a very positive experience. The staff were caring, professional and dedicated throughout her recovery journey." },
+  { name: "Rizni Reza", role: "Physiotherapy patient", stars: 5, quote: "The physiotherapists carefully assessed my condition, explained the treatment plan and supported my recovery every step of the way. Excellent service and patient care." },
+  { name: "Jannathul Firdhousiya Aroos", role: "Knee pain & swelling", stars: 5, quote: "I visited Maximus Care with severe knee pain and swelling. The team was extremely supportive and professional, and my condition improved significantly." },
+  { name: "Mambo Rami Travel Blog", role: "Back pain recovery", stars: 5, quote: "I had severe back pain and received excellent physiotherapy treatment. The therapists were friendly, professional and guided me throughout the recovery process." },
+  { name: "MN Gmail", role: "Inpatient rehabilitation", stars: 5, quote: "One of the best physiotherapy centres in the Colombo region. Excellent physiotherapists and inpatient rehabilitation facilities." },
+  { name: "Feizia", role: "Post-surgical hand therapy", stars: 5, quote: "Following hand surgery, physiotherapy helped improve my hand stability and function. The therapists were patient, knowledgeable and professional." },
 ];

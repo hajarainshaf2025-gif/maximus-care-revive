@@ -7,10 +7,10 @@ import heroImg from "@/assets/hero-rehab.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Maximus Care — Sri Lanka's Rehabilitation Specialists" },
-      { name: "description", content: "Maximus Care is a leading rehabilitation and physiotherapy provider in Sri Lanka — restoring independence through evidence-based, affordable care." },
+      { title: "About Maximus Care — Sri Lanka's Physiotherapy Specialists" },
+      { name: "description", content: "Maximus Care is a leading physiotherapy and rehabilitation provider in Sri Lanka — restoring independence through evidence-based, affordable care." },
       { property: "og:title", content: "About Maximus Care" },
-      { property: "og:description", content: "A rehabilitation home built on healing, dignity and science." },
+      { property: "og:description", content: "A physiotherapy home built on healing, dignity and science." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <SiteLayout>
-      <PageHeader eyebrow="About Us" title="A rehabilitation home built on healing, dignity and science." intro="Maximus Care Physio & Rehab Unit (Pvt) Ltd is one of Sri Lanka's leading rehabilitation and physiotherapy providers." />
+      <PageHeader eyebrow="About Us" title="A physiotherapy home built on healing, dignity and science." intro="Maximus Care Physio & Rehab Unit (Pvt) Ltd is one of Sri Lanka's leading physiotherapy and rehabilitation providers." />
       <section className="py-20 container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <img src={facilityImg} alt="Maximus Care facility" loading="lazy" className="rounded-3xl shadow-card object-cover aspect-[4/3] w-full" />
         <div>

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Activity, Award, Brain, CheckCircle2, ChevronRight, Heart, Home as HomeIcon, MapPin, MessageCircle, Phone, Sparkles, Star, Stethoscope, Users, Waves } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
-import { BRANCHES, SERVICES, SITE, TESTIMONIALS, WHY } from "@/lib/site";
+import { BRANCHES, GOOGLE_REVIEWS, SERVICES, SITE, STATS, TESTIMONIALS, WHY } from "@/lib/site";
 import heroImg from "@/assets/hero-rehab.jpg";
 import neuroImg from "@/assets/neuro-rehab.jpg";
 import inpatientImg from "@/assets/inpatient.jpg";
@@ -15,9 +15,9 @@ import facilityImg from "@/assets/facility.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maximus Care — Rehabilitation & Physiotherapy Sri Lanka" },
-      { name: "description", content: "Sri Lanka's trusted rehabilitation & physiotherapy centre. Stroke, neurological, inpatient, sports & home-visit care. 1000+ patients, 4 branches." },
-      { property: "og:title", content: "Maximus Care — Rehabilitation & Physiotherapy Sri Lanka" },
+      { title: "Maximus Care — Physiotherapy & Rehabilitation Sri Lanka" },
+      { name: "description", content: "Sri Lanka's trusted physiotherapy & rehabilitation centre. Stroke, neurological, inpatient, sports & home-visit care. 5000+ patients, 4 branches." },
+      { property: "og:title", content: "Maximus Care — Physiotherapy & Rehabilitation Sri Lanka" },
       { property: "og:description", content: "Helping patients recover, regain independence and rebuild their lives." },
       { property: "og:url", content: "/" },
     ],
@@ -37,25 +37,28 @@ function Index() {
         <div className="container mx-auto relative px-6 pt-16 pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
-              <Sparkles className="h-3.5 w-3.5" /> Rehabilitation • Physiotherapy • Inpatient Care
+              <Sparkles className="h-3.5 w-3.5" /> Physiotherapy • Rehabilitation • Inpatient Care
             </p>
             <h1 className="mt-5 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance">
-              Sri Lanka's Trusted <span className="text-accent">Rehabilitation</span> & Physiotherapy Centre
+              Sri Lanka's Trusted <span className="text-accent">Physiotherapy</span> & Rehabilitation Centre
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-xl leading-relaxed">
-              Helping patients recover, regain independence and rebuild their lives through advanced rehabilitation, physiotherapy and personalised care.
+              Helping patients recover, regain independence and rebuild their lives through advanced physiotherapy, rehabilitation and personalised care.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={`tel:${SITE.phoneIntl}`} className="inline-flex items-center gap-2 rounded-full bg-gradient-accent px-7 py-3.5 font-semibold text-accent-foreground shadow-glow hover:scale-[1.02] transition-transform">
                 <Phone className="h-5 w-5" /> Call Now
               </a>
               <a href={`https://wa.me/${SITE.whatsapp}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold hover:bg-white/90 transition-colors">
-                <MessageCircle className="h-5 w-5" /> WhatsApp Us
+                <MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsappDisplay}
+              </a>
+              <a href={`https://wa.me/${SITE.whatsapp2}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold hover:bg-white/90 transition-colors">
+                <MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsapp2Display}
               </a>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-primary-foreground/80">
-              <div><strong className="text-3xl block text-white">1000+</strong>Patients Treated</div>
-              <div><strong className="text-3xl block text-white">10,000+</strong>Therapy Sessions</div>
+              <div><strong className="text-3xl block text-white">5000+</strong>Patients Treated</div>
+              <div><strong className="text-3xl block text-white">10,000+</strong>Treatment Sessions</div>
               <div><strong className="text-3xl block text-white">4</strong>Branches</div>
             </div>
           </div>
@@ -120,20 +123,20 @@ function Index() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
-            <img src={facilityImg} alt="Modern rehabilitation hospital facility" loading="lazy" className="rounded-3xl shadow-card aspect-[4/3] object-cover w-full" />
+            <img src={facilityImg} alt="Modern physiotherapy and rehabilitation facility" loading="lazy" className="rounded-3xl shadow-card aspect-[4/3] object-cover w-full" />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-primary text-primary-foreground rounded-2xl p-6 shadow-glow max-w-[220px]">
-              <p className="text-4xl font-bold">10+</p>
-              <p className="text-sm text-primary-foreground/80 mt-1">years of dedicated rehabilitation experience</p>
+              <p className="text-4xl font-bold">5+</p>
+              <p className="text-sm text-primary-foreground/80 mt-1">years of dedicated physiotherapy service</p>
             </div>
           </div>
           <div>
             <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">About Maximus Care</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-bold text-balance">A rehabilitation home built on healing, dignity and science.</h2>
+            <h2 className="mt-3 text-3xl md:text-5xl font-bold text-balance">A physiotherapy home built on healing, dignity and science.</h2>
             <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
-              Maximus Care Physio & Rehab Unit (Pvt) Ltd is a leading rehabilitation and physiotherapy provider dedicated to helping patients recover from neurological conditions, stroke, surgery, sports injuries, chronic pain, and mobility limitations.
+              Maximus Care Physio & Rehab Unit (Pvt) Ltd is a leading physiotherapy and rehabilitation provider dedicated to helping patients recover from neurological conditions, stroke, surgery, sports injuries, chronic pain, and mobility limitations.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Our mission is to deliver affordable, evidence-based rehabilitation that restores independence, improves quality of life, and supports long-term recovery.
+              Our mission is to deliver affordable, evidence-based physiotherapy and rehabilitation that restores independence, improves quality of life, and supports long-term recovery.
             </p>
             <ul className="mt-6 grid sm:grid-cols-2 gap-3">
               {["Rehabilitation-focused care", "Community healthcare mission", "Professional multidisciplinary team", "Affordable & accessible services", "Long-term recovery support"].map(x => (
@@ -153,7 +156,7 @@ function Index() {
           <div className="flex items-end justify-between gap-6 flex-wrap mb-12">
             <div className="max-w-2xl">
               <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">Our Services</p>
-              <h2 className="mt-3 text-3xl md:text-5xl font-bold">20 specialised therapies under one roof</h2>
+              <h2 className="mt-3 text-3xl md:text-5xl font-bold">20 specialised physiotherapy & rehabilitation therapies under one roof</h2>
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 text-primary font-semibold hover:text-accent">All services <ChevronRight className="h-4 w-4" /></Link>
           </div>
@@ -198,13 +201,7 @@ function Index() {
       <section className="py-20 md:py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            {[
-              ["1000+", "Patients Treated"],
-              ["10,000+", "Therapy Sessions"],
-              ["4", "Locations"],
-              ["20+", "Therapies Offered"],
-              ["10+", "Years of Care"],
-            ].map(([n, l]) => (
+            {STATS.map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-gradient-soft border border-border p-6 shadow-soft">
                 <p className="text-3xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">{n}</p>
                 <p className="mt-2 text-sm text-muted-foreground font-medium">{l}</p>
@@ -220,7 +217,7 @@ function Index() {
           <img src={homeImg} alt="Home visit physiotherapy" loading="lazy" className="rounded-3xl shadow-card aspect-[4/3] object-cover w-full order-2 lg:order-1" />
           <div className="order-1 lg:order-2">
             <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">Home Visit Service</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-bold text-balance">Professional Rehabilitation & Physiotherapy at Your Home</h2>
+            <h2 className="mt-3 text-3xl md:text-5xl font-bold text-balance">Professional Physiotherapy & Rehabilitation at Your Home</h2>
             <p className="mt-5 text-muted-foreground text-lg">For patients who cannot travel, our therapists bring world-class rehabilitation directly to your doorstep.</p>
             <ul className="mt-6 grid sm:grid-cols-2 gap-2 text-sm">
               {["Stroke Rehabilitation","Neurological Rehabilitation","Elderly Care","Post-Surgical Recovery","Pain Management","Wheelchair Patient Rehab","Home Exercise Programs","Long-Term Support"].map(x => (
@@ -238,6 +235,11 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">Patient Stories</p>
             <h2 className="mt-3 text-3xl md:text-5xl font-bold">Recoveries we are proud of</h2>
+            <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-secondary border border-border px-5 py-2.5 shadow-soft">
+              <div className="flex gap-0.5 text-accent">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
+              <span className="text-sm font-bold text-foreground">{GOOGLE_REVIEWS.rating} Google Rating</span>
+              <span className="text-sm text-muted-foreground">· {GOOGLE_REVIEWS.count} Reviews</span>
+            </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TESTIMONIALS.slice(0, 6).map((t) => (
@@ -259,7 +261,7 @@ function Index() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">Our Branches</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-bold">Quality rehabilitation, close to home</h2>
+            <h2 className="mt-3 text-3xl md:text-5xl font-bold">Quality physiotherapy & rehabilitation, close to home</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {BRANCHES.map((b) => (
@@ -278,10 +280,11 @@ function Index() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-balance max-w-3xl mx-auto">Start the recovery journey today.</h2>
-          <p className="mt-4 text-primary-foreground/85 max-w-xl mx-auto">Speak directly with our rehabilitation team. We will guide you through the right program for your needs.</p>
+          <p className="mt-4 text-primary-foreground/85 max-w-xl mx-auto">Speak directly with our physiotherapy team. We will guide you through the right program for your needs.</p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <a href={`tel:${SITE.phoneIntl}`} className="inline-flex items-center gap-2 rounded-full bg-gradient-accent text-accent-foreground px-7 py-3.5 font-semibold shadow-glow"><Phone className="h-5 w-5" /> Call {SITE.phone}</a>
-            <a href={`https://wa.me/${SITE.whatsapp}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold"><MessageCircle className="h-5 w-5" /> WhatsApp Now</a>
+            <a href={`https://wa.me/${SITE.whatsapp}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold"><MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsappDisplay}</a>
+            <a href={`https://wa.me/${SITE.whatsapp2}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold"><MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsapp2Display}</a>
           </div>
         </div>
       </section>
