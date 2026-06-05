@@ -7,10 +7,10 @@ import heroImg from "@/assets/hero-rehab.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Maximus Care — Sri Lanka's Rehabilitation Specialists" },
-      { name: "description", content: "Maximus Care is a leading rehabilitation and physiotherapy provider in Sri Lanka — restoring independence through evidence-based, affordable care." },
+      { title: "About Maximus Care — Sri Lanka's Physiotherapy Specialists" },
+      { name: "description", content: "Maximus Care is a leading physiotherapy and rehabilitation provider in Sri Lanka — restoring independence through evidence-based, affordable care." },
       { property: "og:title", content: "About Maximus Care" },
-      { property: "og:description", content: "A rehabilitation home built on healing, dignity and science." },
+      { property: "og:description", content: "A physiotherapy home built on healing, dignity and science." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
