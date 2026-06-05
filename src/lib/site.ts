@@ -8,7 +8,7 @@ export const SITE = {
   whatsappDisplay: "077 647 9364",
   whatsapp2Display: "074 104 1324",
   hours: "Open Daily · 9:00 AM – 9:00 PM",
-  email: "info@maximuscare.lk",
+  email: "maximuscare.rehab@gmail.com",
   facebook: "https://facebook.com/maximuscare",
   instagram: "https://instagram.com/maximuscare",
 };
