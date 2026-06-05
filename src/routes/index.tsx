@@ -235,6 +235,11 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">Patient Stories</p>
             <h2 className="mt-3 text-3xl md:text-5xl font-bold">Recoveries we are proud of</h2>
+            <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-secondary border border-border px-5 py-2.5 shadow-soft">
+              <div className="flex gap-0.5 text-accent">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
+              <span className="text-sm font-bold text-foreground">{GOOGLE_REVIEWS.rating} Google Rating</span>
+              <span className="text-sm text-muted-foreground">· {GOOGLE_REVIEWS.count} Reviews</span>
+            </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TESTIMONIALS.slice(0, 6).map((t) => (
@@ -256,7 +261,7 @@ function Index() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-accent text-sm font-bold uppercase tracking-[0.2em]">Our Branches</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-bold">Quality rehabilitation, close to home</h2>
+            <h2 className="mt-3 text-3xl md:text-5xl font-bold">Quality physiotherapy & rehabilitation, close to home</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {BRANCHES.map((b) => (
@@ -275,10 +280,11 @@ function Index() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-balance max-w-3xl mx-auto">Start the recovery journey today.</h2>
-          <p className="mt-4 text-primary-foreground/85 max-w-xl mx-auto">Speak directly with our rehabilitation team. We will guide you through the right program for your needs.</p>
+          <p className="mt-4 text-primary-foreground/85 max-w-xl mx-auto">Speak directly with our physiotherapy team. We will guide you through the right program for your needs.</p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <a href={`tel:${SITE.phoneIntl}`} className="inline-flex items-center gap-2 rounded-full bg-gradient-accent text-accent-foreground px-7 py-3.5 font-semibold shadow-glow"><Phone className="h-5 w-5" /> Call {SITE.phone}</a>
-            <a href={`https://wa.me/${SITE.whatsapp}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold"><MessageCircle className="h-5 w-5" /> WhatsApp Now</a>
+            <a href={`https://wa.me/${SITE.whatsapp}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold"><MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsappDisplay}</a>
+            <a href={`https://wa.me/${SITE.whatsapp2}`} className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold"><MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsapp2Display}</a>
           </div>
         </div>
       </section>
