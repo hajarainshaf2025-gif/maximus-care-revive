@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
-import logo from "@/assets/longlogo.png";
+import logo from "@/assets/logo.png";
 import { NAV, SITE } from "@/lib/site";
 
 export function Header() {
@@ -17,8 +17,8 @@ export function Header() {
         </div>
       </div>
       <div className="container mx-auto flex items-center justify-between gap-6 px-6 py-3">
-        <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="Maximus Care Physio and Rehab Unit logo" className="h-12 md:h-14 w-auto" />
+        <Link to="/" className="flex items-center gap-2 flex-none">
+          <img src={logo} alt="Maximus Care Physio and Rehab Unit logo" className="h-16 md:h-20 w-auto" />
         </Link>
         <nav className="hidden lg:flex items-center gap-1">
           {NAV.map((n) => (

@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import favicon from "@/assets/logo.png?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -78,15 +79,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Maximus Care — Sri Lanka's Trusted Physio & Rehab Centre" },
+      { title: "Maximus Care" },
       { name: "description", content: "Sri Lanka's leading physiotherapy, rehabilitation and inpatient recovery centre. Stroke, neurological, sports and home-visit care across 4 branches." },
-      { property: "og:site_name", content: "Maximus Care Physio & Rehab Unit" },
+      { property: "og:site_name", content: "Maximus Care" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1d3a8a" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: favicon },
+      { rel: "apple-touch-icon", href: favicon },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" },

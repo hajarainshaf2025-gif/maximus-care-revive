@@ -15,7 +15,7 @@ import facilityImg from "@/assets/facility.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maximus Care — Physiotherapy & Rehabilitation Sri Lanka" },
+      { title: "Maximus Care" },
       { name: "description", content: "Sri Lanka's trusted physiotherapy & rehabilitation centre. Stroke, neurological, inpatient, sports & home-visit care. 5000+ patients, 4 branches." },
       { property: "og:title", content: "Maximus Care — Physiotherapy & Rehabilitation Sri Lanka" },
       { property: "og:description", content: "Helping patients recover, regain independence and rebuild their lives." },
