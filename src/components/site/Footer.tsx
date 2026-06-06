@@ -12,8 +12,7 @@ export function Footer() {
             <img src={logo} alt="Maximus Care" className="h-12 w-auto" />
           </div>
           <p className="text-sm text-primary-foreground/80 leading-relaxed">
-            Sri Lanka's trusted physiotherapy & rehabilitation provider — restoring movement,
-            independence and quality of life.
+            MAXIMUS CARE PHYSIO AND REHAB UNIT - Sri Lanka's trusted physiotherapy & rehabilitation provider — restoring movement, independence and quality of life.
           </p>
           <div className="flex gap-3 mt-5">
             <a
