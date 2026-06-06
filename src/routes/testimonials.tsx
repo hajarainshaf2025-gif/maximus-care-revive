@@ -6,13 +6,13 @@ import { GOOGLE_REVIEWS, TESTIMONIALS } from "@/lib/site";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Patient Testimonials — Maximus Care Recoveries" },
+      { title: "Maximus Care" },
       {
         name: "description",
         content:
           "Real recovery stories from patients we have treated across Sri Lanka — stroke, surgery, sports injuries, chronic pain and more.",
       },
-      { property: "og:title", content: "Patient Testimonials — Maximus Care" },
+      { property: "og:title", content: "Maximus Care" },
       { property: "og:description", content: "Recoveries we are proud of." },
       { property: "og:url", content: "/testimonials" },
     ],
