@@ -54,9 +54,9 @@ export const BRANCHES = [
     slug: "kalubowila",
     name: "Maximus Care Neuro Unit",
     tag: "Neuro Specialty",
-    address: "Woodland Mawatha, Anderson Road, Kalubowila, Dehiwala, Sri Lanka",
-    maps: "https://www.google.com/maps?q=Woodland+Mawatha+Anderson+Road+Kalubowila+Dehiwala+Sri+Lanka&output=embed",
-    directions: "https://www.google.com/maps/dir/?api=1&destination=Woodland+Mawatha+Anderson+Road+Kalubowila+Dehiwala+Sri+Lanka",
+    address: "No 97, Woodland Avenue, Anderson Road, Kalubowila, Dehiwala, Sri Lanka",
+    maps: "https://www.google.com/maps?q=6.860529,79.881981&output=embed",
+    directions: "https://www.google.com/maps/dir/?api=1&destination=6.860529,79.881981",
   },
 ];
 
