@@ -200,10 +200,10 @@ function Index() {
       {/* RESULTS / STATS */}
       <section className="py-20 md:py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
             {STATS.map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-gradient-soft border border-border p-6 shadow-soft">
-                <p className="text-3xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">{n}</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">{n}</p>
                 <p className="mt-2 text-sm text-muted-foreground font-medium">{l}</p>
               </div>
             ))}
