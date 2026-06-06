@@ -11,14 +11,21 @@ export function Header() {
       <div className="hidden md:block bg-primary text-primary-foreground text-xs">
         <div className="container mx-auto flex justify-between px-6 py-2">
           <span>{SITE.hours}</span>
-          <a href={`tel:${SITE.phoneIntl}`} className="flex items-center gap-2 hover:text-accent transition-colors">
+          <a
+            href={`tel:${SITE.phoneIntl}`}
+            className="flex items-center gap-2 hover:text-accent transition-colors"
+          >
             <Phone className="h-3.5 w-3.5" /> {SITE.phone}
           </a>
         </div>
       </div>
       <div className="container mx-auto flex items-center justify-between gap-6 px-6 py-3">
         <Link to="/" className="flex items-center gap-2 flex-none">
-          <img src={logo} alt="Maximus Care Physio and Rehab Unit logo" className="h-16 md:h-20 w-auto" />
+          <img
+            src={logo}
+            alt="Maximus Care Physio and Rehab Unit logo"
+            className="h-16 md:h-20 w-auto"
+          />
         </Link>
         <nav className="hidden lg:flex items-center gap-1">
           {NAV.map((n) => (
@@ -39,7 +46,11 @@ export function Header() {
         >
           <Phone className="h-4 w-4" /> Call Now
         </a>
-        <button onClick={() => setOpen(!open)} aria-label="Menu" className="lg:hidden p-2 text-foreground">
+        <button
+          onClick={() => setOpen(!open)}
+          aria-label="Menu"
+          className="lg:hidden p-2 text-foreground"
+        >
           {open ? <X /> : <Menu />}
         </button>
       </div>
@@ -57,7 +68,10 @@ export function Header() {
               {n.label}
             </Link>
           ))}
-          <a href={`tel:${SITE.phoneIntl}`} className="block px-3 py-2 mt-2 rounded-md bg-gradient-accent text-accent-foreground text-center font-semibold">
+          <a
+            href={`tel:${SITE.phoneIntl}`}
+            className="block px-3 py-2 mt-2 rounded-md bg-gradient-accent text-accent-foreground text-center font-semibold"
+          >
             Call {SITE.phone}
           </a>
         </nav>

@@ -80,7 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Maximus Care" },
-      { name: "description", content: "Sri Lanka's leading physiotherapy, rehabilitation and inpatient recovery centre. Stroke, neurological, sports and home-visit care across 4 branches." },
+      {
+        name: "description",
+        content:
+          "Sri Lanka's leading physiotherapy, rehabilitation and inpatient recovery centre. Stroke, neurological, sports and home-visit care across 4 branches.",
+      },
       { property: "og:site_name", content: "Maximus Care" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -92,21 +96,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "apple-touch-icon", href: favicon },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap",
+      },
     ],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        name: "Maximus Care Physio & Rehab Unit (Pvt) Ltd",
-        description: "Physiotherapy and rehabilitation provider in Sri Lanka specialising in stroke, neurological and inpatient rehabilitation.",
-        telephone: "+94776479364",
-        address: { "@type": "PostalAddress", streetAddress: "3/15, Pinwatta Road", addressLocality: "Dehiwala", addressCountry: "LK" },
-        openingHours: "Mo-Su 09:00-21:00",
-        medicalSpecialty: ["Physiotherapy", "Rehabilitation"],
-      }),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          name: "Maximus Care Physio & Rehab Unit (Pvt) Ltd",
+          description:
+            "Physiotherapy and rehabilitation provider in Sri Lanka specialising in stroke, neurological and inpatient rehabilitation.",
+          telephone: "+94776479364",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "3/15, Pinwatta Road",
+            addressLocality: "Dehiwala",
+            addressCountry: "LK",
+          },
+          openingHours: "Mo-Su 09:00-21:00",
+          medicalSpecialty: ["Physiotherapy", "Rehabilitation"],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

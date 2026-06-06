@@ -14,7 +14,11 @@ export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
       { title: "Gallery — Maximus Care Facilities, Sessions & Patient Stories" },
-      { name: "description", content: "See our clinic facilities, rehabilitation sessions, inpatient unit, neuro rehab, aqua therapy, home visits and patient success stories." },
+      {
+        name: "description",
+        content:
+          "See our clinic facilities, rehabilitation sessions, inpatient unit, neuro rehab, aqua therapy, home visits and patient success stories.",
+      },
       { property: "og:title", content: "Gallery — Maximus Care" },
       { property: "og:description", content: "Inside Sri Lanka's leading rehabilitation centre." },
       { property: "og:url", content: "/gallery" },
@@ -39,14 +43,28 @@ const ITEMS = [
 function Gallery() {
   return (
     <SiteLayout>
-      <PageHeader eyebrow="Gallery" title="Inside Maximus Care." intro="A glimpse of our facilities, our therapists at work, and the patients we are proud to serve." />
+      <PageHeader
+        eyebrow="Gallery"
+        title="Inside Maximus Care."
+        intro="A glimpse of our facilities, our therapists at work, and the patients we are proud to serve."
+      />
       <section className="py-16 container mx-auto px-6">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
           {ITEMS.map((it) => (
-            <figure key={it.label} className="mb-5 break-inside-avoid rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-shadow group relative">
-              <img src={it.src} alt={it.label} loading="lazy" className="w-full h-auto group-hover:scale-105 transition-transform duration-700" />
+            <figure
+              key={it.label}
+              className="mb-5 break-inside-avoid rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-shadow group relative"
+            >
+              <img
+                src={it.src}
+                alt={it.label}
+                loading="lazy"
+                className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+              />
               <figcaption className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-primary/90 to-transparent text-white">
-                <span className="block text-xs uppercase tracking-widest text-accent font-semibold">{it.cat}</span>
+                <span className="block text-xs uppercase tracking-widest text-accent font-semibold">
+                  {it.cat}
+                </span>
                 <span className="text-sm font-medium">{it.label}</span>
               </figcaption>
             </figure>
