@@ -18,15 +18,15 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { BRANCHES, GOOGLE_REVIEWS, SERVICES, SITE, STATS, TESTIMONIALS, WHY } from "@/lib/site";
-import heroImg from "@/assets/hero-rehab.jpg";
+import heroImg from "@/assets/main-web.png";
 import neuroImg from "@/assets/neuro-rehab.jpg";
 import inpatientImg from "@/assets/inpatient.jpg";
 import aquaImg from "@/assets/aqua.jpg";
-import sportsImg from "@/assets/sports.jpg";
+import sportsImg from "@/assets/sport.png";
 import homeImg from "@/assets/home-visit.jpg";
-import physioImg from "@/assets/physio.jpg";
+import physioImg from "@/assets/physio1.png";
 import elderlyImg from "@/assets/elderly.jpg";
-import facilityImg from "@/assets/facility.jpg";
+import facilityImg from "@/assets/clinic.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -136,7 +136,7 @@ function Index() {
             [inpatientImg, "Inpatient Care"],
             [aquaImg, "Aqua Therapy"],
             [homeImg, "Home Visit Therapy"],
-            [heroImg, "Modern Facilities"],
+            [facilityImg, "Modern Facilities"],
           ].map(([src, label]) => (
             <div
               key={label as string}

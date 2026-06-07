@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, SiteLayout } from "@/components/site/Layout";
-import facility from "@/assets/facility.jpg";
-import hero from "@/assets/hero-rehab.jpg";
+import facility from "@/assets/clinic.png";
+import hero from "@/assets/main-web.png";
 import neuro from "@/assets/neuro-rehab.jpg";
 import inpatient from "@/assets/inpatient.jpg";
 import aqua from "@/assets/aqua.jpg";
-import sports from "@/assets/sports.jpg";
+import sports from "@/assets/sport.png";
 import home from "@/assets/home-visit.jpg";
-import physio from "@/assets/physio.jpg";
+import physio from "@/assets/physio1.png";
 import elderly from "@/assets/elderly.jpg";
 
 export const Route = createFileRoute("/gallery")({

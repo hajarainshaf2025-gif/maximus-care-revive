@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site/Layout";
 import inpatientImg from "@/assets/inpatient.jpg";
-import facilityImg from "@/assets/facility.jpg";
+import facilityImg from "@/assets/clinic.png";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/inpatient")({

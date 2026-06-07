@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, Heart, Target, Eye } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site/Layout";
-import facilityImg from "@/assets/facility.jpg";
-import heroImg from "@/assets/hero-rehab.jpg";
+import facilityImg from "@/assets/clinic.png";
+import heroImg from "@/assets/main-web.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
