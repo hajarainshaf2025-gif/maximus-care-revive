@@ -1,22 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { NAV, SITE } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
       <div className="hidden md:block bg-primary text-primary-foreground text-xs">
-        <div className="container mx-auto flex justify-between px-6 py-2">
-          <span>{SITE.hours}</span>
-          <a
-            href={`tel:${SITE.phoneIntl}`}
-            className="flex items-center gap-2 hover:text-accent transition-colors"
-          >
-            <Phone className="h-3.5 w-3.5" /> {SITE.phone}
-          </a>
+        <div className="container mx-auto flex justify-center px-6 py-2">
+          <span className="tracking-wide">{SITE.hours}</span>
         </div>
       </div>
       <div className="container mx-auto flex items-center justify-between gap-6 px-6 py-3">
@@ -33,23 +27,23 @@ export function Header() {
               key={n.to}
               to={n.to}
               activeOptions={{ exact: n.to === "/" }}
-              activeProps={{ className: "text-primary bg-secondary" }}
-              className="text-sm font-medium text-foreground/80 hover:text-primary px-3 py-2 rounded-md transition-colors"
+              activeProps={{ className: "text-primary bg-primary/8 font-semibold" }}
+              className="text-sm font-medium text-foreground/70 hover:text-primary hover:bg-muted px-3 py-2 rounded-md transition-colors"
             >
               {n.label}
             </Link>
           ))}
         </nav>
-        <a
-          href={`tel:${SITE.phoneIntl}`}
-          className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-soft hover:shadow-glow transition-all"
+        <Link
+          to="/contact"
+          className="hidden md:inline-flex items-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
         >
-          <Phone className="h-4 w-4" /> Call Now
-        </a>
+          Book Appointment
+        </Link>
         <button
           onClick={() => setOpen(!open)}
           aria-label="Menu"
-          className="lg:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground rounded-md hover:bg-muted transition-colors"
         >
           {open ? <X /> : <Menu />}
         </button>
@@ -62,18 +56,19 @@ export function Header() {
               to={n.to}
               onClick={() => setOpen(false)}
               activeOptions={{ exact: n.to === "/" }}
-              activeProps={{ className: "text-primary bg-secondary" }}
-              className="block px-3 py-2 rounded-md text-sm font-medium text-foreground/80 hover:bg-secondary"
+              activeProps={{ className: "text-primary bg-primary/8 font-semibold" }}
+              className="block px-3 py-2 rounded-md text-sm font-medium text-foreground/70 hover:bg-muted"
             >
               {n.label}
             </Link>
           ))}
-          <a
-            href={`tel:${SITE.phoneIntl}`}
-            className="block px-3 py-2 mt-2 rounded-md bg-gradient-accent text-accent-foreground text-center font-semibold"
+          <Link
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className="block px-3 py-2.5 mt-2 rounded-md bg-primary text-primary-foreground text-center text-sm font-semibold hover:bg-primary/90 transition-colors"
           >
-            Call {SITE.phone}
-          </a>
+            Book Appointment
+          </Link>
         </nav>
       )}
     </header>

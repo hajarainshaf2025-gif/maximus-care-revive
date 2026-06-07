@@ -88,19 +88,7 @@ function Index() {
                 href={`tel:${SITE.phoneIntl}`}
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-accent px-7 py-3.5 font-semibold text-accent-foreground shadow-glow hover:scale-[1.02] transition-transform"
               >
-                <Phone className="h-5 w-5" /> Call Now
-              </a>
-              <a
-                href={`https://wa.me/${SITE.whatsapp}`}
-                className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold hover:bg-white/90 transition-colors"
-              >
-                <MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsappDisplay}
-              </a>
-              <a
-                href={`https://wa.me/${SITE.whatsapp2}`}
-                className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-7 py-3.5 font-semibold hover:bg-white/90 transition-colors"
-              >
-                <MessageCircle className="h-5 w-5" /> WhatsApp {SITE.whatsapp2Display}
+                <Phone className="h-5 w-5" /> Contact Us
               </a>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-primary-foreground/80">

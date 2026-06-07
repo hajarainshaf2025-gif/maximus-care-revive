@@ -22,7 +22,7 @@ export function FloatingActions() {
       </a>
       <a
         href={`tel:${SITE.phoneIntl}`}
-        aria-label="Call now"
+        aria-label="Contact Us"
         className="grid h-14 w-14 place-items-center rounded-full bg-gradient-accent text-accent-foreground shadow-glow hover:scale-110 transition-transform"
       >
         <Phone className="h-6 w-6" />
