@@ -9,8 +9,8 @@ export const SITE = {
   whatsapp2Display: "074 104 1324",
   hours: "Open Daily · 9:00 AM – 9:00 PM",
   email: "maximuscare.rehab@gmail.com",
-  facebook: "https://facebook.com/maximuscare",
-  instagram: "https://instagram.com/maximuscare",
+  facebook: "https://facebook.com/Maximuscarephysio",
+  instagram: "https://instagram.com//maximuscarephysiorehab/",
 };
 
 export const NAV = [
